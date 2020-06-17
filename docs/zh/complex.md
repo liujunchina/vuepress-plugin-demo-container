@@ -2,6 +2,50 @@
 
 此处提供了两种复杂场景的示例，Demo Container 都能良好的支持，具体效果如下所示：
 
+
+::: demo
+```html
+<template>
+    <vue-form
+        v-model="formData"
+        :schema="schema"
+    >
+    </vue-form>
+</template>
+
+<script>
+export default {
+    name: 'Demo',
+    data() {
+        return {
+            formData: {},
+            schema: {
+                type: 'object',
+                required: [
+                    'firstName'
+                ],
+                properties: {
+                    firstName: {
+                        type: 'string',
+                        title: 'First name',
+                        default: 'Liu'
+                    },
+                    lastName: {
+                        type: 'string',
+                        title: 'Last name'
+                    },
+                }
+            }
+        };
+    }
+};
+</script>
+<style>
+.box-vue { color: red; }
+</style>
+```
+:::
+
 ## TodoMVC 示例
 
 `demo-container` 对示例提供了良好的支持，本例子取自 `Vue` 官方文档示例中较为复杂的 `TodoMVC`，其展示效果 [点此查看](https://cn.vuejs.org/v2/examples/todomvc.html)
