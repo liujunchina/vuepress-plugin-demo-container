@@ -42,7 +42,7 @@
 </template>
 
 <script type="text/babel">
-import './style/index.less'
+import './style/index.styl'
 import defaultLang from './i18n/default_lang.json';
 export default {
   data() {
